@@ -70,7 +70,7 @@ if [[ ("$UFW" == "y" || "$UFW" == "Y" || "$UFW" == "") ]]; then
   sudo ufw default deny incoming
   sudo ufw default allow outgoing
   sudo ufw allow ssh
-  sudo ufw allow 1945/tcp
+  sudo ufw allow 32323/tcp
   sudo ufw enable -y
 fi
 
@@ -108,8 +108,8 @@ daemon=1
 logtimestamps=1
 maxconnections=256
 externalip='$EXTERNALIP'
-bind='$EXTERNALIP':1945
-masternodeaddr='$EXTERNALIP':1945
+bind='$EXTERNALIP':32323
+masternodeaddr='$EXTERNALIP':32323
 masternodeprivkey='$key'
 masternode=1
 ' | sudo -E tee ~/.roco/roco.conf >/dev/null 2>&1
