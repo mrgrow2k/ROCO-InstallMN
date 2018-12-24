@@ -7,9 +7,9 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 # Set these to change the version of ROCO to install
-TARBALLURL="https://github.com/ROIyalCoin/ROIyalCoin/releases/download/v1.0.0.1/ubuntu16.04-daemon.zip"
+TARBALLURL="https://github.com/ROIyalCoin/ROIyalCoin/releases/download/v1.1.0.1/ubuntu16.04-daemon.zip"
 TARBALLNAME="ubuntu16.04-daemon.zip"
-ROCOVERSION="1.0.0.1"
+ROCOVERSION="1.1.0.1"
 # Get our current IP
 EXTERNALIP=`dig +short myip.opendns.com @resolver1.opendns.com`
 clear
