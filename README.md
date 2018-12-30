@@ -55,7 +55,7 @@ sudo apt-get -y install git
 Then clone the Github repository.
 
 ```bash
-git clone https://github.com/ROIyalCoin/ROCO-InstallMN
+git clone https://github.com/mrgrow2k/ROCO-InstallMN
 ```
 Navigate to the install folder:
 
