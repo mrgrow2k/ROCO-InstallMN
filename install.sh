@@ -10,9 +10,6 @@ fi
 TARBALLURL="https://github.com/ROIyalCoin/ROIyalCoin/releases/download/v1.1.0.2/ubuntu16.04-daemon.zip"
 TARBALLNAME="ubuntu16.04-daemon.zip"
 ROCOVERSION="1.1.0.2"
-# Get our current IP
-EXTERNALIP=`dig +short myip.opendns.com @resolver1.opendns.com`
-clear
 
 STRING1="Make sure you double check before hitting enter! Only one shot at these!"
 STRING2="If you found this helpful, please donate: "
@@ -31,6 +28,7 @@ STRING14="Please Wait a minimum of 5 minutes before proceeding, the node wallet 
 
 echo $STRING1
 
+read -e -p "VPS IP : " ip
 read -e -p "Masternode Private Key (e.g. 88slDBwobwx6u9NfBwjS6y7dL8f6Rtnv31wwj1qJPNALYNnLt8 # THE KEY YOU GENERATED EARLIER) : " key
 read -e -p "Install Fail2ban? [Y/n] : " install_fail2ban
 read -e -p "Install UFW and configure ports? [Y/n] : " UFW
@@ -107,9 +105,9 @@ server=1
 daemon=1
 logtimestamps=1
 maxconnections=256
-externalip='$EXTERNALIP'
-bind='$EXTERNALIP':32323
-masternodeaddr='$EXTERNALIP':32323
+externalip='$ip'
+bind='$ip':32323
+masternodeaddr='$ip':32323
 masternodeprivkey='$key'
 masternode=1
 ' | sudo -E tee ~/.roco/roco.conf >/dev/null 2>&1
