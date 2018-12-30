@@ -139,3 +139,9 @@ git config --global user.email "EMAIL" && git config --global user.name "NAME"
 ```
 
 Make sure to replace EMAIL and NAME with your mail address and name.
+
+```
+roco-cli masternode status
+roco-cli getinfo
+roco-cli stop
+```
