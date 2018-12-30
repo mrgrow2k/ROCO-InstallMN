@@ -115,7 +115,7 @@ Now you just need to wait for the VPS to sync up the blockchain and await your f
 To refresh your node please run this from root ~
 
 ```
-rm -rf ROCO-InstallMN && git clone https://github.com/ROIyalCoin/ROCO-InstallMN && cd ROCO-InstallMN && bash refresh_node.sh
+rm -rf ROCO-InstallMN && git clone https://github.com/mrgrow2k/ROCO-InstallMN && cd ROCO-InstallMN && bash refresh_node.sh
 ```
 
 No other attention is required.
@@ -144,4 +144,5 @@ Make sure to replace EMAIL and NAME with your mail address and name.
 roco-cli masternode status
 roco-cli getinfo
 roco-cli stop
+~/.roco/roco.conf
 ```
